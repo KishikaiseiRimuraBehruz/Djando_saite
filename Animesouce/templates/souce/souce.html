@@ -1,0 +1,23 @@
+{% extends 'Anime/base.html' %}
+<!--{% extends 'Anime/layout.html %'}-->
+{% block title %} Creators {% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>🅐🅝🅘🅜🅔</h1>
+        <h1>Creators</h1>
+        {% if creat %}
+          {% for el in creat%}
+            <div class="alert alert-warning">
+                <h3> {{ el.title }}</h3>
+                <p> {{ el.image}}</p>
+                <p>{{ el.full_text}}</p>
+            </div>
+          {% endfor %}
+        {% else %}
+            <p> Простите здесь пока что ничего нету</p>
+        {% endif %}
+
+        {# Коментарий #}
+    </div>
+{% endblock %}

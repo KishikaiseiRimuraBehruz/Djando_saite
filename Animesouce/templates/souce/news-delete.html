@@ -1,0 +1,14 @@
+{% extends 'Anime/base.html' %}
+<!--{% extends 'Anime/layout.html %'}-->
+{% block title %} Delete {% endblock %}
+
+{% block content %}
+<div class="creat">
+    <h1>🅐🅝🅘🅜🅔</h1>
+    <h1>Delete</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-success" type="submit">Удалить статью</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'Anime/base.html' %}
+<!--{% extends 'Anime/layout.html %'}-->
+{% block title %} Create {% endblock %}
+
+{% block content %}
+<div class="creat">
+    <h1>🅐🅝🅘🅜🅔</h1>
+    <h1>Create</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.anons }}<br>
+        {{ form.full_text }}<br>
+        {{ form.image }}<br>
+        {{ form.date }}<br>
+        <span> {{ error }}</span>
+        <button class="btn btn-success" type="submit">Добавить статью</button>
+    </form>
+</div>
+{% endblock %}

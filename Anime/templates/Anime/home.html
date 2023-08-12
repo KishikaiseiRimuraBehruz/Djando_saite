@@ -1,0 +1,22 @@
+{% extends 'Anime/base.html' %}
+{% block title %} ANIME ONLINE {% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>🅐🅝🅘🅜🅔</h1>
+    <p>*Please allow a few days until you receive a response. If you did not receive an answer from us then it means that we were not interested. Spamming will get you blacklisted. *Please make sure to read the FAQ before sending us a message. Do not send us a message about a job. A career page will be created in the near future with what we need. *Support is only available in English or French language.For something specific/general/business inquiries or any issues with the clips or website, please contact us. For blog posts inquiries, please be aware that we will only work with brands related to anime or video editing. Please also keep in mind that we only take suggestions from our ULTRA members for the moment being. </p>
+</div>
+<div class="row">
+    {% for anime in anime %}
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ anime.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ anime.name }}</h5>
+              <p class="card-text"> Anime Japan sesion: {{ anime.animeseision }} </p>
+              <a href="#" class="btn btn-primary"> Dowloand </a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}
